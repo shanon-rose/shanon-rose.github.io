@@ -1,0 +1,35 @@
+<nav class="column has-background-primary is-one-third menu">
+  <p class="menu-label has-text-white has-text-weight-bold">Nice Jekyll Site</p>
+  <ul class="menu-list">
+    {% for item in site.data.navigation %}
+    <li>
+      <a href="{{ item.link }}" {% if page.url == item.link %} class="nav-current"{% endif %}>
+        {{ item.name }}
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+  
+  <p class="menu-label has-text-white">Bolg</p>
+  <ul class="menu-list">
+    {% for post in site.posts %}
+      <li>
+        <a href="{{ post.url }}" {% if page.url == post.url %} class="nav-current"{% endif %}>
+          {{ post.title }}
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+
+  <p class="menu-label has-text-white">Books</p>
+  <ul class="menu-list">
+    {% assign books = site.books | sort: "order" %}
+    {% for book in books %}
+      <li>
+        <a href="{{ book.url }}" {% if page.url == book.url %} class="nav-current"{% endif %}>
+          {{ book.title }}
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+</nav>

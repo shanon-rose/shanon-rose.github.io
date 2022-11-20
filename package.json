@@ -1,0 +1,14 @@
+{
+  "name": "jekyll-exp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.2.4",
+    "@tailwindcss/forms": "^0.5.3"
+  }
+}

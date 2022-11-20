@@ -1,0 +1,15 @@
+collections:
+  books:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: "books"
+    values:
+      layout: "default"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"

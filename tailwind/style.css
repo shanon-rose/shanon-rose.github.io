@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  min-height: 100vh;
+  width: 100vw;
+  background-color: black;
+}
+
+.background-futurism {
+  background-color: darkolivegreen;
+  background-image: url('/assets/futurism.jpg');
+  background-size: cover;
+}
+
+.background-fantasy {
+  background-color: blueviolet;
+  background-image: url('/assets/fantasy.jpg');
+  background-size: cover;
+}

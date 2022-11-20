@@ -1,5 +1,5 @@
-npx tailwind -c tailwind/tailwind.config.js -i tailwind/style.css -o src/assets/style.css
+npx tailwind -wc tailwind/tailwind.config.js -i tailwind/style.css -o docs/assets/style.css
 docker build -t shanon-rose .
 docker stop shanon-rose
 docker rm shanon-rose
-docker run -p 4000:4000 -p 35729:35729 --name shanon-rose -v $PWD:/usr/src/app shanon-rose
+docker run -dp 4000:4000 -p 35729:35729 --name shanon-rose -v $PWD/docs:/usr/src/app shanon-rose

@@ -1,35 +1,10 @@
-<nav class="column has-background-primary is-one-third menu">
-  <p class="menu-label has-text-white has-text-weight-bold">Nice Jekyll Site</p>
-  <ul class="menu-list">
+{% assign currentPage = page.url | replace: ".html", "" %}
+<nav class="flex mb-4 mx-auto justify-center">
     {% for item in site.data.navigation %}
-    <li>
-      <a href="{{ item.link }}" {% if page.url == item.link %} class="nav-current"{% endif %}>
-        {{ item.name }}
-      </a>
-    </li>
+    <a
+      href="{{ item.link }}"
+      class="block mr-2 p-2 rounded-md hover:bg-slate-800 {% if currentPage == item.link %} bg-purple-700 {% endif %}">
+      {{ item.name }}
+    </a>
     {% endfor %}
-  </ul>
-  
-  <p class="menu-label has-text-white">Bolg</p>
-  <ul class="menu-list">
-    {% for post in site.posts %}
-      <li>
-        <a href="{{ post.url }}" {% if page.url == post.url %} class="nav-current"{% endif %}>
-          {{ post.title }}
-        </a>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="menu-label has-text-white">Books</p>
-  <ul class="menu-list">
-    {% assign books = site.books | sort: "order" %}
-    {% for book in books %}
-      <li>
-        <a href="{{ book.url }}" {% if page.url == book.url %} class="nav-current"{% endif %}>
-          {{ book.title }}
-        </a>
-      </li>
-    {% endfor %}
-  </ul>
 </nav>

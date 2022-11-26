@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./docs/index.html', './docs/_layouts/*.html', './docs/_includes/*.html'],
+  content: ['./docs/**/*.html'],
   theme: {
     fontFamily: {
       serif: ["Philosopher", "ui-serif", "Georgia", "Cambria", "Times New Roman", "Times", "serif"]

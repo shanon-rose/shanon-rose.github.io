@@ -1,0 +1,15 @@
+---
+layout: default
+---
+
+{% include navigation.html %}
+{% assign books = site.books | where: "category", page.category | sort: "order" %}
+{% for book in books %}
+  <div class="flex flex-row mb-8">
+    <img class="w-32 h-32 bg-slate-400" />
+    <div class="ml-2">
+      <h2 class="font-bold font-serif text-lg">{{book.title}}</h2>
+      {{book.content | markdownify}}
+    </div>
+  </div>
+{% endfor %}

@@ -1,4 +1,8 @@
 - name: Home
   link: /
-- name: About
-  link: /about.html
+- name: Spec Fic
+  link: /spec-fic
+- name: Fantasy
+  link: /fantasy
+- name: News
+  link: /posts

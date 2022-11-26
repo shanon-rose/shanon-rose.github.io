@@ -1,46 +1,31 @@
 ---
+layout: default
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/assets/style.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Philosopher">
-  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-  <title>Shanon Rose</title>
-</head>
-<body class="text-white">
-  <article class="container mx-auto mb-8 mt-12">
-    <h1 class="font-bold font-serif text-8xl mb-4">Shanon Rose is writing about&hellip;</h1>
-    <p>Many, many things. Some futuristic and some fantastical aliquam, lorem nec auctor aliquet, dui justo pellentesque purus, sit amet ornare tellus purus eget libero. Ut volutpat metus arcu, nec ultrices arcu fringilla in. Maecenas id pulvinar velit.</p>
-  </article>
-  <section class="container grid grid-cols-1 md:grid-cols-2 gap-4 mx-auto mb-4 text-xl">
-    <a href="" class="block text-4xl px-4 pt-6 pb-16 rounded font-serif shadow-lg transition-transform hover:scale-105 background-futurism">Books about tomorrows that could be</a>
-    <a href="" class="block text-4xl px-4 pt-6 pb-16 rounded font-serif shadow-lg transition-transform hover:scale-105 background-fantasy">Books about worlds not entirely unlike our own</a>
-  </section>
-  <section class="container grid grid-cols-1 md:grid-cols-2 gap-4 mx-auto mb-4">
-    <div class="py-8">
-      <h2 class="font-bold font-serif text-4xl">Latest news posts</h2>
-      {% for post in site.posts %}
-      <a href="{{ post.url }}" class="bg-white text-black p-4 rounded mt-6 hover:bg-purple-200 block">
-        <p class="font-bold font-serif text-purple-900 text-lg">{{ post.title }}</p>
-        <div class="text-xs text-slate-800">{{ post.excerpt }}</div>
-        <p class="text-xs text-slate-400">{{ post.date | date_to_string }}</p>
-      </a>
-      {% endfor %}
-      <a href="" class="block font-bold mt-4 px-4 hover:text-purple-400">More news&hellip;</a>
+<h1 class="font-bold font-serif text-8xl my-8">Shanon Rose is writing about&hellip;</h1>
+<p>Many, many things. Some futuristic and some fantastical aliquam, lorem nec auctor aliquet, dui justo pellentesque purus, sit amet ornare tellus purus eget libero. Ut volutpat metus arcu, nec ultrices arcu fringilla in. Maecenas id pulvinar velit.</p>
+<section class="container grid grid-cols-1 md:grid-cols-2 gap-4 mx-auto mb-4 mt-12 text-xl">
+  <a href="/spec-fic" class="block text-4xl px-4 pt-6 pb-16 rounded font-serif shadow-lg transition-transform hover:scale-105 background-futurism">Books about tomorrows that could be</a>
+  <a href="/fantasy" class="block text-4xl px-4 pt-6 pb-16 rounded font-serif shadow-lg transition-transform hover:scale-105 background-fantasy">Books about worlds not entirely unlike our own</a>
+</section>
+<section class="container grid grid-cols-1 md:grid-cols-2 gap-4 mx-auto mb-4">
+  <div class="py-8">
+    <h2 class="font-bold font-serif text-4xl">Latest news posts</h2>
+    {% for post in site.posts %}
+    <a href="{{ post.url }}" class="bg-white text-black p-4 rounded mt-6 hover:bg-purple-200 block">
+      <p class="font-bold font-serif text-purple-900 text-lg">{{ post.title }}</p>
+      <div class="text-xs text-slate-800">{{ post.excerpt }}</div>
+      <p class="text-xs text-slate-400">{{ post.date | date_to_string }}</p>
+    </a>
+    {% endfor %}
+    <a href="" class="block font-bold mt-4 px-4 hover:text-purple-400">More news&hellip;</a>
+  </div>
+  <div class="py-8">
+    <h2 class="font-bold font-serif text-4xl">Newsletter</h2>
+    <p class="mb-2 mt-4">Subscribe to get updates and news posts straight to your inbox</p>
+    <div class="flex">
+      <input class="rounded text-black p-2 block mr-2 flex-grow shadow-inner" type="email" placeholder="My email"/>
+      <button class="bg-slate-500 hover:bg-blue-600 px-2 rounded">Subscribe</button>
     </div>
-    <div class="py-8">
-      <h2 class="font-bold font-serif text-4xl">Newsletter</h2>
-      <p class="mb-2 mt-4">Subscribe to get updates and news posts straight to your inbox</p>
-      <div class="flex">
-        <input class="rounded text-black p-2 block mr-2 flex-grow shadow-inner" type="email" placeholder="My email"/>
-        <button class="bg-slate-500 hover:bg-blue-600 px-2 rounded">Subscribe</button>
-      </div>
-    </div>
-  </section>
-</body>
-</html>
+  </div>
+</section>
